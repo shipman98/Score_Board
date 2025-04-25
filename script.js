@@ -1,4 +1,4 @@
-const SHEET_CSV_URL = 'https://docs.google.com/spreadsheets/d/1ZM_eN_XKNl4YFvVzJpbNgZlJjUbrx3qtlVqagKLcHkE/edit?pli=1&gid=0#gid=0';
+const SHEET_CSV_URL = 'https://docs.google.com/spreadsheets/d/YOUR_SHEET_ID/gviz/tq?tqx=out:csv';
 
 fetch(SHEET_CSV_URL)
   .then(response => response.text())
@@ -7,7 +7,7 @@ fetch(SHEET_CSV_URL)
     const thead = document.querySelector('#scoreboard thead');
     const tbody = document.querySelector('#scoreboard tbody');
 
-    // Çì´õ
+    // í—¤ë”
     const headerRow = document.createElement('tr');
     rows[0].forEach(cell => {
       const th = document.createElement('th');
@@ -16,7 +16,7 @@ fetch(SHEET_CSV_URL)
     });
     thead.appendChild(headerRow);
 
-    // º»¹®
+    // ë³¸ë¬¸
     rows.slice(1).forEach(row => {
       const tr = document.createElement('tr');
       row.forEach(cell => {
@@ -30,4 +30,3 @@ fetch(SHEET_CSV_URL)
   .catch(err => {
     console.error('Error fetching Google Sheet:', err);
   });
-
