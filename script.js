@@ -1,4 +1,4 @@
-const SHEET_CSV_URL = 'https://docs.google.com/spreadsheets/d/YOUR_SHEET_ID/gviz/tq?tqx=out:csv';
+const SHEET_CSV_URL = 'https://docs.google.com/spreadsheets/d/1ZM_eN_XKNl4YFvVzJpbNgZlJjUbrx3qtlVqagKLcHkE/edit?pli=1&gid=0#gid=0';
 
 fetch(SHEET_CSV_URL)
   .then(response => response.text())
